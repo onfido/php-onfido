@@ -6,7 +6,7 @@ onfido-php is a PHP API client for Onfido's REST API.
 
 You can obtain onfido-php from source
 
-    $ git clone https://code2be@bitbucket.org/code2be/onfido-php.git
+    $ git clone https://github.com/onfido/php-onfido.git
 
 # Usage
 
@@ -14,7 +14,7 @@ At the beginning, You need is to import the autoload.php file, Initiate the Conf
 
     require_once('autoload.php');
 
-    \Onfido\Config::init()->set_token('test_NY2rpxJR3C0YwS9WWDzSMoFJ5s95-7aV');
+    \Onfido\Config::init()->set_token('YOUR TOKEN');
 
 ## Applicants
 
@@ -44,7 +44,7 @@ The [applicant](https://onfido.com/documentation#applicants) endpoint supports t
 ### List applicants
 ``->paginate(2, 5)`` means to get page #2 where each page has 5 Applicants, Any of both can be null to ignore
 
-    \Onfido\Config::init()->set_token('test_NY2rpxJR3C0YwS9WWDzSMoFJ5s95-7aV')->paginate(2, 5);
+    \Onfido\Config::init()->set_token('YOUR TOKEN')->paginate(2, 5);
 
     $applicants = (new \Onfido\Applicant())->get();
 
@@ -89,7 +89,7 @@ The [checks](https://onfido.com/documentation#checks) endpoint supports two oper
 
 ### List checks
 
-    \Onfido\Config::init()->set_token('test_NY2rpxJR3C0YwS9WWDzSMoFJ5s95-7aV')->paginate(null, 5);
+    \Onfido\Config::init()->set_token('YOUR TOKEN')->paginate(null, 5);
 
     $checks = (new \Onfido\Check())->get(APPLICANT_ID);
 
