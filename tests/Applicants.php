@@ -53,7 +53,6 @@ class ApplicantsTest extends PHPUnit_Framework_TestCase {
     $applicant->addresses = Array($address1);
 
     $response = $applicant->create();
-    // var_dump($response);
 
     $this->assertInstanceOf('stdClass', $response);
     $this->assertObjectHasAttribute('first_name', $response);
