@@ -155,7 +155,7 @@ class Request {
 
         $httpError = curl_getinfo($this->curlHandle, CURLINFO_HTTP_CODE);
         if(strpos($httpError, '2') !== 0)
-          return 'HTTP Error #' . $httpError . ' with Response: ' . $response;
+          return $response;
 
         try {
             $data = json_decode($response);
