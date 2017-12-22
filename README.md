@@ -1,3 +1,5 @@
+:warning: **This project is now obsolete and has been superseded by [our new PHP API client](https://github.com/onfido/api-php-client)**.  We recommend you migrate to use the newer client library.
+
 # onfido-php
 
 onfido-php is a PHP API client for Onfido's REST API.
