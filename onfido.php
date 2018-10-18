@@ -100,7 +100,6 @@ class Request {
 
     public function send($params) {
       if(\Onfido\Config::init()->debug)
-        var_dump(get_object_vars($params));
 
         $params = get_object_vars($params);
 
@@ -109,14 +108,10 @@ class Request {
        $url_params = '';
 
         if($this->method === 'POST') {
-            // $headers[] = "Content-type: multipart/form-data";
 
             curl_setopt($this->curlHandle, CURLOPT_POST, 1);
 
             $this->prepare_params($params);
-
-            // var_dump($params);
-            // var_dump(http_build_query($params));
 
             curl_setopt($this->curlHandle, CURLOPT_POSTFIELDS, $params);
         }
